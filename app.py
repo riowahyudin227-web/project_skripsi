@@ -78,9 +78,6 @@ def check_login(username: str, password: str):
     users = load_users()
     password_hash = hash_password(password)
 
-    st.write("Password yang dihitung:", password_hash)
-    st.write("Isi users.json:", users)
-
     for user in users:
         if (
             user["username"] == username
@@ -319,8 +316,9 @@ def data_penerima_page():
 
         jumlah_data = st.selectbox(
     "Jumlah data yang ditampilkan",
-    []
+    [10, 20, 30, 50, 68]
 )
+
         st.dataframe(
     penerima[kolom_tampil].head(jumlah_data),
     width="stretch"
