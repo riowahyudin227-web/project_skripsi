@@ -16,10 +16,10 @@ def set_background():
 
         .stApp {
             background-image: linear-gradient(
-                rgba(255,255,255,0.55)
-                rgba(255,255,255,0.55)
-            ),
-            url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.55)
+),
+url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -321,7 +321,7 @@ def data_penerima_page():
 
         st.dataframe(
     penerima[kolom_tampil].head(jumlah_data),
-    width="stretch"
+    width="True"
 )
 
 def data_kriteria_page():
